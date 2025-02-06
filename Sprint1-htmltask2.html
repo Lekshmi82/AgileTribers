@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+    .table2{
+        border:2px solid black;
+    }
+    .table3,.td3,.th3{
+        border:1px solid black;
+        border-collapse: collapse;
+        width:50%;
+    }
+    .table4,.td4,.th4{
+        border:2px solid black;
+        border-width:60%;
+    }
+    .table5,.th5,.td5{
+        border:2px solid black;
+        width:50%;
+    }
+    .table6,.th6,.td6{
+        border:2px solid black;
+        width:50%;
+        border-collapse:collapse ;
+    }
+    .table7,.th7,.td7{
+        border:1px solid black;
+        width:80%;
+    }
+   </style>
+<body>
+    <h1>HTML TABLE</h1>
+        <table class="table1">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr> 
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders </td>
+                <td>Germany</td>
+            </tr>
+            <tr> 
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang   </td>
+                <td>Mexico</td>
+            </tr>
+            <tr> 
+                <td>Ernst Handel </td>
+                <td>Ernst Handel </td>
+                <td>Austria </td>
+            </tr>
+            <tr> 
+                <td>Island Trading</td>
+                <td>Helen Bennent</td>
+                <td>UK</td>
+            </tr>
+            <tr> 
+                <td>Laughing Bacchus Winecellars </td>
+                <td>Yoshi Tannamuri Canada </td>
+                <td>Canada</td>
+            </tr>
+            <tr> 
+                <td>Magazzini Alimentari Riuniti </td>
+                <td>Giovanni Rovelli Italy</td>
+                <td>Italy</td>
+            </tr>
+            </table>
+            <br/>
+            <table class="table2">
+                <tr class="table2">
+                    <th class="table2">Country</th>
+                    <th class="table2">Capital</th>
+                    <th class="table2">Population</th>
+                </tr>
+                <tr class="table2">
+                    <th class="table2">USA</th>
+                    <th class="table2">Washington,D.C.</th>
+                    <th class="table2">328 million</th>
+                </tr>
+                    <tr class="table2">
+                        <th class="table2">India</th>
+                        <th class="table2">NewDelhi</th>
+                        <th class="table2">1.366 billion</th>
+                    </tr>
+                        <tr class="table2">
+                            <th class="table2">Japan</th>
+                            <th class="table2">Tokyo</th>
+                            <th class="table2">126 million</th>
+                        </tr>
+                        </table>
+                        <br/>
+                        <h3> HTML Colspan Attribute</h3>
+                            <table style="border:2px solid black;">
+                                <tr>
+                                    <th style="border:2px solid black;">Name</th>
+                                    <th style="border:2px solid black;">Expense</th>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;">Arun</td>
+                                    <td style="border:2px solid black;">$10</td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;">Priya</td>
+                                    <td style="border:2px solid black;">$8</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Sum:$18</td>
+                                </tr>
+                            </table>
+                                <table class="table3">
+                                    <br/>
+                                    <tr>
+                                        <th class="th3" colspan="2">FULL NAME</th>
+                                        <th class="th3">Age</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="td3">Fabio</td>
+                                        <td class="td3">Cimo</td>
+                                        <td class="td3">20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td3">Jasmin</td>
+                                        <td class="td3">Brown</td>
+                                        <td class="td3">18</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td3">James</td>
+                                        <td class="td3">Wick</td>
+                                        <td class="td3">35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td3">Donald</td>
+                                        <td class="td3">Dawn</td>
+                                        <td class="td3">29</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td3" colspan="2">Average Age</td>
+                                        <td class="td3">22</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <table class="table4">
+                                        <p>Combining colspan and rowspan</p>
+                                    <tr>
+                                        <th class="th4" rowspan="2" colspan="2">Header(spans 2 columns and rows)</th>
+                                        <th class="th4">data</th>
+
+                                    </tr>
+                                    <tr>
+                                       
+                                        <td class="td4">data</td>
+                                    <tr>
+                                        <td class="td4">data</td>
+                                        <td class="td4">data</td>
+                                        <td class="td4">data</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                    <table class="table5">
+                                    <tr>
+                                        <th class="th5" colspan="5">number</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="td5" rowspan="2">1</td>
+                                        <td class="td5">2</td>
+                                        <td class="td5">3</td>
+                                        <td class="td5">4</td>
+                                        <td class="td5">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td5">6</td>
+                                        <td class="td5" colspan="3">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td5">8</td>
+                                        <td class="td5">9</td>
+                                        <td class="td5" rowspan="2">10</td>
+                                        <td class="td5">11</td>
+                                        <td class="td5">12</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td5">13</td>
+                                        <td class="td5">14</td>
+                                        <td class="td5">15</td>
+                                        <td class="td5">16</td>
+                                    </tr>
+                                    </table>
+                                    <br/>
+                                    <table class="table6">
+                                        <tr>
+                                            <th class="th6" colspan="6">Time Table</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="td6" rowspan="6">Hours</td>
+                                            <td class="td6">mon</td>
+                                            <td class="td6">tues</td>
+                                            <td class="td6">Wed</td>
+                                            <td class="td6">Thurs</td>
+                                            <td class="td6">Fri</td> 
+                                        </tr>
+                                        <tr>
+                                            <td class="td6">Science</td>
+                                            <td class="td6">Maths</td>
+                                            <td class="td6">Science</td>
+                                            <td class="td6">Maths</td>
+                                            <td class="td6">Arts</td> 
+                                        </tr>
+                                        <tr>
+                                            <td class="td6">Science</td>
+                                            <td class="td6">Maths</td>
+                                            <td class="td6">Science</td>
+                                            <td class="td6">Maths</td>
+                                            <td class="td6">Arts</td> 
+                                        </tr>
+                                        <tr>
+                                            <th class="th6" colspan="6">Lunch</th>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td class="td6">Science</td>
+                                            <td class="td6">Maths</td>
+                                            <td class="td6">Science</td>
+                                            <td class="td6">Maths</td>
+                                            <td class="td6" rowspan="2"> Project</td>
+                                         </tr>
+                                         <tr>
+                                            <td class="td6">Science</td>
+                                            <td class="td6">Maths</td>
+                                            <td class="td6">Science</td>
+                                            <td class="td6">Maths</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                                    <h2>Using Image in HTML</h2>
+                                    <P>Attributes::: "height","width" and "alt"</P>
+                                    <hr/>
+                                    <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220630132824/HTML-Full-Form.jpg" alt="HTML IMAGE" 
+                                    style="width: 300px; height: 250px; display: inline-block;"/>
+                                    <img src="https://www.cheggindia.com/wp-content/uploads/2023/09/css-full-form.png" alt="CSS IMAGE" 
+                                    style="width: 300px; height: 250px;"/>
+                                    <br/>
+                                    <h3> Please Fill And Submit Form:</h3>
+                                    <hr/>
+                                    <br/>
+                                    <form>
+                                        <label for="name">Name:</label><input type="text">
+                                        <br/><br/>
+                                        <label for="email">Email:</label><input type="text">
+                                        <br/><br/>
+                                        <input type="Submit" value="Submit">
+                                    </form>
+                                    <br/>
+                                    <h3> Please Fill And Submit Form:</h3>
+                                    <hr/>
+                                    <br/>
+                                    <form>
+                                        <label for="name">Name:</label><input type="text">
+                                        <br/><br/>
+                                        <label for="email">Email:</label><input type="text">
+                                        <br/><br/>
+                                        <p>Select A color you like:</p>
+                                        <input type="radio">
+                                        <label for="color">Red</label><br/>
+                                        <input type="radio">
+                                        <label for="color">Green</label><br/>
+                                        <input type="radio">
+                                        <label for="color">Blue</label><br/><br/>
+                                    <input type="Submit" value="Submit"><br/><br/>
+                                    </form>
+                                    <form>
+                                        <label for="name">Name:</label><input type="text">
+                                        <br/><br/>
+                                        <label for="email">Email:</label><input type="text">
+                                        <br/><br/>
+                                        <p>Select A color you like:</p>
+                                        <input type="radio">
+                                        <label for="color">Red</label><br/>
+                                        <input type="radio">
+                                        <label for="color">Green</label><br/>
+                                        <input type="radio">
+                                        <label for="color">Blue</label><br/><br/>
+                                        <label for="Color">Select your facorite color:</label>
+                                        <select id="Options" name="options">
+                                        <option value>Red</options>
+                                        <option value>Green</options>
+                                        <option value>Blue</options>
+                                        <option value>Yellow</options>
+                                        </select>
+                                        <br/><br/><br/>
+                                    <input type="Submit" value="Submit"><br/><br/>
+                                    </form>
+                                    <form>
+                                        <label for="name">Name:</label><input type="text">
+                                        <br/><br/>
+                                        <label for="email">Email:</label><input type="text">
+                                        <br/><br/>
+                                        <p>Select A color you like:</p>
+                                        <input type="radio">
+                                        <label for="color">Red</label><br/>
+                                        <input type="radio">
+                                        <label for="color">Green</label><br/>
+                                        <input type="radio">
+                                        <label for="color">Blue</label><br/><br/>
+                                        <label for="Color">Select your facorite color:</label>
+                                        <select id="Options" name="options">
+                                        <option value>Red</options>
+                                        <option value>Green</options>
+                                        <option value>Blue</options>
+                                        <option value>Yellow</options>
+                                        </select>
+                                        <br/>
+                                        <p>Choose your skill level:</p>
+                                        <input type="checkbox">
+                                        <label for="Beginner">Beginner</label><br/>
+                                        <input type="checkbox">
+                                        <label for="Intermediate">Intermediate</label><br/>
+                                        <input type="checkbox">
+                                        <label for="Advanced">Advanced</label><br/>
+                                        <br/>
+                                    <input type="Submit" value="Submit">
+                                    </form>
+                                <div>
+                                    <h3>Image Showcase Using Div Tag</h3>
+                                    <hr/>
+                                    <p>div-1</p>
+                                    <h4>Beautiful Sunset</h4>
+                                    <img src="https://t4.ftcdn.net/jpg/05/83/87/67/360_F_583876738_eC5lsIKAvQ6tR2HhkXcGk3hCPL2gLPhv.jpg"alt="Beautiful Sunset" 
+                                    style="width: 150px; height: 100px;"/><br/>
+                                    <p style="font-size:9px;">This is a stunning view of a sunset over the ocean.The golden hues reflecting on the water create a mesmerizing scene that brings tranquility and peace to the mind.Behold the majestic mountains standing tall and proud.Their snow-capped peaks touch the sky,and their valleys hide secrets waiting to be explored.A pardise for adventure seekers and nature lovers.</p><hb/>
+                                    <p>div-2</p>
+                                    <h4>Majestic Mountains</h4>
+                                    <img src="https://images.moneycontrol.com/static-mcnews/2024/12/20241210043624_1.jpg?impolicy=website&width=770&height=431"alt="Beautiful Sunset" 
+                                    style="width: 150px; height: 100px;"/><br/>
+                                    <p style="font-size:9px;">This is a stunning view of a mountain over the ocean.The golden hues reflecting on the water create a mesmerizing scene that brings tranquility and peace to the mind.Behold the majestic mountains standing tall and proud.Their snow-capped peaks touch the sky,and their valleys hide secrets waiting to be explored.A pardise for adventure seekers and nature lovers.</p><hb/>
+                                </div>
+                                    <h3>Using Videos in HTML</h3>
+                                    <hr/>
+                                        <iframe src="https://www.youtube.com/embed/Yp3ZQD5HIig" alt="Video" height="150px" width="150px" >ONE Direction</iframe><br/><br/>
+                                    <table class="table7">
+                                        <tr>
+                                            <th class="th7" colspan="6">HTML Table Example</th>   
+                                        </tr>
+                                        <tr>
+                                        <th class="th7" colspan="2">Student Name</th>
+                                        <th class="th7" colspan="3">Labs</th>
+                                        <th class="th7" colspan="2" rowspan="2">Avg</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="th7">First</th>
+                                        <th class="th7">Last</th>
+                                        <th class="th7">Lab1</th>
+                                        <th class="th7">Lab2</th>
+                                        <th class="td7">Lab3</th> 
+                                    </tr>
+                                    <tr>
+                                        <td class="td7">Sol</td>  
+                                        <td class="td7">Rosenberg</td>
+                                        <td class="td7">100</td>  
+                                        <td class="td7">100</td>  
+                                        <td class="td7">100</td>  
+                                        <td class="td7">100.0</td>  
+                                    </tr>
+                                    <tr>
+                                        <td class="td7">Frank</td>  
+                                        <td class="td7">Rizzo</td>
+                                        <td class="td7">50</td>  
+                                        <td class="td7">60</td>  
+                                        <td class="td7">90</td>  
+                                        <td class="td7">66.6</td>  
+                                    </tr>
+                                    <tr>
+                                        <td class="td7">Ali</td>  
+                                        <td class="td7">Kam</td>
+                                        <td class="td7">90</td>  
+                                        <td class="td7">80</td>  
+                                        <td class="td7">60</td>  
+                                        <td class="td7">76.6</td>  
+                                    </tr>
+                                    <tr>
+                                        <th class="th7" colspan="1" rowspan="2">Summary</th>  
+                                        <th class="th7">Avg</th>
+                                        <td class="td7">80.0</td>
+                                        <td class="td7">80.0</td>
+                                        <td class="td7">803.3</td>  
+                                        <td class="td7">81.1</td>   
+                                    </tr>
+                                    <tr>
+                                        <th class="th7">Min</th>  
+                                        <td class="td7">50</td>  
+                                        <td class="td7">60</td>  
+                                        <td class="td7">60</td>  
+                                        <td class="td7">66.6</td>  
+                                    </tr>
+                                    
+                                    
+                
+
+                                    
+
+
+
+
+
+
+
+
+                                    
+
+
+                                
+
+
+
+
+
+
+
+
+
+        
