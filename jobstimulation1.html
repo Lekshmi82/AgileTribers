@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Simulation Platform</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://media.licdn.com/dms/image/v2/D560BAQEf2vSylUFWjg/company-logo_200_200/company-logo_200_200/0/1733405205037/agiletribers_logo?e=2147483647&v=beta&t=FqY219fxRIWo-PwcPQ5kxEHDx2LycebAPg5r8bjNkaw" alt="Company Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="active">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="welcome-section">
+            <h1>Unleash Your Potential with Real-World Job Simulations</h1>
+            <p>Level up your skills, boost your confidence, and crush your career goals with job simulations that feel like the real deal. Tailored just for you, because you're not here to play—it’s time to slay.</p>
+        </section>   
+        <div class="content-columns">
+            <section id="services" class="services">
+                <h2>Our Services</h2>
+                <ul>
+                    <li>
+                        <i class="fas fa-laptop-code"></i>
+                        <strong>Interactive Job Simulations</strong>
+                        <p>Engage in lifelike job scenarios to prepare for real-world challenges.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i>
+                        <strong>Skill Assessment</strong>
+                        <p>Receive real-time feedback on your skills, helping you to identify strengths and areas for improvement.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-graduate"></i>
+                        <strong>Career Guidance</strong>
+                        <p>Access expert advice on navigating your career path and excelling in your chosen field.</p>
+                    </li>
+                </ul>
+            </section>
+            <section id="about" class="about-us">
+                <h2>About Us</h2>
+                <p>At jobX, we’re not just preparing you for a job—we’re preparing you for greatness. We believe the future belongs to those who take action. That’s why our immersive job simulations give you the real-world skills, confidence, and insights you need to not only meet but exceed your career goals. It’s time to stop dreaming and start doing—because the future isn’t waiting for anyone, and neither should you.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Contact us: <a href="tel:+1234567890">+1 234 567 890</a> | <a href="mailto:info@jobsimpro.com">info@jobsimpro.com</a></p>
+        </div>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>  |
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+        <p>&copy; 2025 JobX. All rights reserved.</p>
+    </footer>
+
+    <!-- Script to add active class to the navigation links -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
