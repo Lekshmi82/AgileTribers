@@ -37,18 +37,16 @@ console.log(arrayOperations([[1, 2], [3, 4]], "Add"));
 console.log(arrayOperations([[23, 98], [42, 70]], "Add")); 
 
 // Ex 3//
-function modifyArray(arr) {
-    let result = [];
-    for (let i = 0; i < arr.length; i++) {
-        result.push(arr[i]); 
-        if (i < arr.length - 1 && arr[i] !== 0) {
-            result.push(arr[i] + arr[i + 1]);
-        }
-    }
-    return result;
+let arr1=[5, 10, 20, 2, 0, 33, 100, 90];
+let i=0, temp=[], sum1;
+while (i<arr1.length){
+    sum1=0;
+    temp.push(arr1[i],arr1[i+1]);
+    sum1 = arr1[i] + arr1[i+1];
+    temp.push(sum1);
+    i+=2;
 }
-let inputArray = [5, 10, 20, 2, 0, 33, 100, 90];
-console.log(modifyArray(inputArray));
+console.log("Original array :", arr1, "\nPattern :", temp)
 
 // Ex4//
 function moveZeroes(nums) {
@@ -71,7 +69,7 @@ console.log(moveZeroes([0, 1, 0, 3, 12]));
 function removeSpaces(str) {
     return str.replace(/\s/g, ""); 
 }
-console.log(removeSpaces("Hey! yo! wasupp!"));
+console.log(removeSpaces("Helloww! Harry! whatsup!"));
 
 // EX6//
 function swapNumbers(a, b) {
