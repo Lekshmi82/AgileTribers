@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Ex 1 */
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 70vh;
+            color: white;
+            text-align: center;
+            margin: 5px;
+            gap: 5px;
+        }
+        header {
+            background-color: #2ec5d8;
+            padding: 15px; 
+            gap:8px;
+        }
+        footer{
+            background-color: orange;
+            padding: 15px; 
+            gap:8px;
+        }
+        .container p{
+            font-size:x-small;
+        }
+        .content {
+            display: flex;
+            flex: 1;
+            gap: 4px;
+        }
+        .left-side {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 5px;
+        }
+        .hero {
+            background-color: #d1c4e9;
+            flex: 1;
+            padding: 20px;
+        }
+        .container .sidebar {
+            background-color: #8bc34a;
+            flex: 1;
+            padding: 20px;
+        }
+        .right-side {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            gap: 5px;
+        }
+        .main-content {
+            background-color: #decb20;
+            flex: 2;
+            padding: 20px;
+        }
+        .extra-content {
+            background-color: #8b8989;
+            flex: 1;
+            padding: 20px;
+        }
+        .related {
+            display: flex;
+            justify-content: space-between;
+            gap: 4px;
+        }
+        .related-images {
+            background-color: #36ba8a;
+            flex: 2;
+            padding: 20px;
+        }
+        .related-posts {
+            background-color: #f8bbd0;
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Ex 2 */
+
+        .ex2 {
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 3px;
+            background-color: #bbe3b0;
+        }
+
+        .ex2 .header {
+            display: flex;
+            gap: 3px;
+        }
+
+        .ex2 .header-box {
+            flex: 1;
+            background-color: #d18c86;
+            height: 60px;
+        }
+
+        .ex2 .content {
+            display: flex;
+            gap: 5px;
+        }
+
+        .ex2 .hero {
+            flex: 1;
+            background-color: #7a806f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+            height: 300px;
+        }
+
+        .ex2 .yellow-box {
+            width: 50px;
+            height: 50px;
+            background-color: #f7ea48;        
+        }
+
+        .ex2 .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0px;
+        }
+
+        .ex2 .sidebar-box {
+            flex: 1;
+            background-color: #889964;
+            height: 50px;
+        }
+
+
+        /* Ex 3 */
+
+        h2, p {
+            margin-bottom: 20px;
+        }
+
+        .container1, .container2{
+            display: flex;
+            background-color: white;
+            width: 400px;
+            margin-bottom: 10px;
+            border: 1px solid #000000;
+        }
+
+        .container1{
+            padding: 10px 0;
+        }
+
+        .container2{
+            padding: 10px;
+            gap: 15px;
+        }
+
+        .box {
+            width: 100px;
+            height: 50px;
+            background-color: rgb(133, 245, 133);
+            border: 1px solid #000;
+        }
+
+        .justify-start {
+            display: flex;
+        }
+
+        .left{
+            margin-left: -10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Ex:1</h2>
+
+    <div class="container">
+        <header>Header</header>
+
+        <div class="content">
+            <div class="left-side">
+                <div class="hero">Hero</div>
+                <div class="sidebar">Sidebar</div>
+            </div>
+            <div class="right-side">
+                <div class="main-content">Main Content<br><p>**Make sure your browser is in experimental mode.</p></div>
+                <div class="extra-content">Extra Content</div>
+            </div>
+        </div>
+
+        <div class="related">
+            <div class="related-images">Related Images</div>
+            <div class="related-posts">Related Posts</div>
+        </div>
+        
+        <footer>Footer</footer>
+    </div>
+
+    <h2>Ex:2</h2>
+
+    <div class="ex2">
+        <div class="header">
+            <div class="header-box"></div>
+            <div class="header-box"></div>
+            <div class="header-box"></div>
+        </div>
+        <div class="content">
+            <div class="hero">
+                <div class="yellow-box"></div>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar-box"></div>
+                <div class="sidebar-box"></div>
+                <div class="sidebar-box"></div>
+                <div class="sidebar-box"></div>
+            </div>
+        </div>
+    </div>    
+
+    <h2>Ex:3</h2>
+
+    <div class="container1">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <p>justify-self will do nothing, because there is no space to distribute</p>
+
+    <div class="container2">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <p>Now that we have space to distribute, we can use justify-self</p>
+
+    <div class="container2">
+        <div class="justify-start">
+            <div class="box" ></div>
+            <div class="box"></div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <p>justify-self: flex-start</p>
+
+    <div class="container2">
+        
+        <div class="box"></div>
+        <div class="justify-start">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="box"></div>
+    </div>
+    <p>justify-self: flex-end</p>
+
+    <div class="container2">
+        <div class="justify-start left">
+            <div class="box" ></div>
+            <div class="box"></div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <p>justify-self: flex-start</p>
+
+</body>
+</html>
