@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    background: #f4f4f4;
+}
+
+.ticket {
+    display: flex;
+    width: 750px;
+    height:300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: url('./World-map.jpg') ;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.642);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px dashed #ccc;
+    position: relative;
+}
+.common{
+     padding: 13px;
+ }
+.left-section {
+    flex: 3;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.header {
+    background: #0073e6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.route {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.route span {
+    font-size: 26px;
+    color: #2a8ce8;
+}
+
+.boarding-info {
+    display: flex;
+    font-size: 14px;
+    padding: 10px;
+    gap:100px;
+}
+
+
+.barcode-strips {
+    flex: 3;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barcode-strips::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 90%;
+    background: repeating-linear-gradient(
+        90deg,
+        black 0px,
+        black 2px,
+        transparent 4px,
+        transparent 7px
+    );
+}
+.Seperator{
+    border-right: 9px dotted rgb(167, 162, 162);
+    margin-right: -6px;
+    margin-left: -5px;
+    position: relative;
+}
+
+.right-section {
+    flex: 1;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.small-header {
+    background: #001f3f;
+    color: white;
+    padding: 18.9px;
+    width: 100%;
+    text-align: center;
+    height: 26%;
+    
+}
+
+.small-details {
+    font-size: 12px;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.barcode {
+    width: 90%;
+    padding-bottom: 30px;
+    height: 40px;
+    background: repeating-linear-gradient(
+        90deg,
+        black 0px,
+        black 2px,
+        transparent 4px,
+        transparent 7px
+    );
+}
