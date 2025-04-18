@@ -1,0 +1,267 @@
+body {
+    /* font-family: Arial, sans-serif; */
+    font-family: 'Cormorant Garamond', serif;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Boarding Pass Container */
+.boarding-pass {
+    display: flex;
+    width: 850px;
+    height: 300px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+/* Cover */
+.boarding-pass.up{
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-image: url('up.jpg');
+    background-size: cover;
+    justify-content: center;
+    width: 850px;
+    height: 300px;
+}
+
+.up img{
+    filter: invert(100%);
+    margin-top: 70px;
+    margin-left: 60px;
+    width: 23%;
+    height: 60%;
+    opacity: 60%;
+}
+
+.boarding-pass.up h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: -40px;
+    color: rgb(195, 169, 104);
+}
+
+.boarding-pass.up strong{
+    font-size: 20px;
+    color: rgb(240, 215, 150);
+    margin-top:20px;
+}
+
+.boarding-pass.down{
+    width: 850px;
+    height: 300px;
+}
+
+.ampersand {
+    font-size: 70px;
+    display: inline-block;
+    background: url('download.jpg') no-repeat top;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: -20px;
+    padding: 0;
+}
+
+.boarding-pass.middle{
+    width: 125mm;
+    height: 88mm;
+}
+
+.cover{
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.inner{
+    background-image: url('https://media.istockphoto.com/id/951160010/vector/%C3%B0%C3%B0%C2%B5%C3%B1%C3%B0%C3%B1%C3%B1.jpg?s=612x612&w=0&k=20&c=sAzz_0z2lECTDyPna7WQi4XpxIamO5gEFZqwqoHIxDA=');
+    background-size: fill;
+    background-color: rgba(37, 70, 109, 0.381);
+    background-blend-mode: darken;
+}
+
+.middle.cover img{
+    height: 150px;
+    width: 160px;
+    margin-left: 0px;
+    margin-bottom: -5px;
+}
+.middle.cover h2{
+    margin: 0px;
+    margin-bottom: -60px;
+    font-size: 40px;
+    margin-left: 40px;
+
+}
+
+/* Below */
+.boarding-pass.down h2{
+    font-family: 'Playfair Display', serif;
+    color: rgb(174, 156, 63);
+    background-color: rgb(30, 39, 78);
+    padding: 5px 100px;
+}
+
+strong{
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+}
+
+h4, h3{
+    margin: 0px;
+}
+
+.barcode {
+    max-width: 100%;
+}
+
+/* Left Section ---------------------*/
+.left-section {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    /* background-image: url('https://media.istockphoto.com/id/951160010/vector/%C3%B0%C3%B0%C2%B5%C3%B1%C3%B0%C3%B1%C3%B1.jpg?s=612x612&w=0&k=20&c=sAzz_0z2lECTDyPna7WQi4XpxIamO5gEFZqwqoHIxDA='); */
+    background-image: url('download.jpg');
+    background-color: rgba(169, 147, 147, 0.477); 
+    background-blend-mode: darken;
+    background-size: cover;
+    justify-content: center;
+}
+
+/* Left most div */
+.side-left {
+    background-size: cover;
+    background-color: #1d2c46;
+}
+
+.header p {
+    transform: rotate(180deg);
+    display: inline-block;
+    writing-mode: vertical-lr;
+    padding: 70px 0px;
+    background: url('gold.jpg') no-repeat top;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Ticket Body */
+.ticket-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ticket-body img{
+    width: 80px;
+    height: 70px;
+    position: overlay;
+    filter: invert(100%);
+    margin-top: -100px;
+    margin-left: 360px;
+}
+
+/* main content */
+.ticket-details-left {
+    display: flex;
+    flex-direction: column;
+    background: rgba(224, 212, 212, 0.477);
+    margin: 30px;
+    padding: 10px 20px;
+    margin-top: -5px;
+}
+
+/* Middle large font */
+.large {
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    color: #1d2c46;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.ticket-details-left > div:nth-of-type(1),
+.ticket-details-left > div:nth-of-type(3) {
+    gap: 50px;
+}
+
+/* Right Section--------------------------------*/
+.right-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('download.jpg');
+    background-color: rgba(169, 147, 147, 0.477); 
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+.ticket-details-right{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    background: rgba(224, 212, 212, 0.477);
+}
+
+.right-section .ticket-body img{
+    margin: 0px;
+    margin-left: 40px;
+    margin-top: -30px;
+    margin-bottom: -70px;
+    object-fit: contain;
+    width: 170px;
+    height: 170px;
+}
+
+.check{
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+input[type="checkbox"]{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Ticket Details */
+.ticket-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.horizontal-barcode {
+    width: 170px;
+    height: 250px;
+    object-fit: contain;
+    margin-top:-130px;
+    margin-bottom: -90px;
+    margin-left: 30px;
+}
+
+/* Separator */
+.separator {
+    border-right: 3px dashed rgb(0, 0, 0);
+    margin-right: -3px;
+    position: relative;
+}
