@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Click Event</title>
+  <style>
+    #hoverBox {
+      width: 300px;
+      height: 150px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 150px;
+      font-size: 20px;
+      border: 2px solid #000;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    <p>1. Button clicked will appear in console (inspect)</p>
+    <button id="simpleClick">Click Me</button><br />
+    
+    <p>2. Click and print sum in console</p>
+    <button onclick="calculateSum()">Click to Add</button><br />
+    
+    <p>3. Type and print value in console</p>
+    <input type="text" id="userInput3" placeholder="Type something here">
+    <button onclick="showInputValue()">Click to Show Value</button><br />
+    
+    <p>4. Type and display value in p tag</p>
+    <input type="text" id="userInput4" placeholder="Type something here">
+    <button onclick="displayValue()">Click to Display</button>
+    <p id="output4"></p><br />
+    
+    <p>5. Type and press enter or click outside it will appear in h1 tag</p>
+    <input type="text" id="userInput5" placeholder="Type something" onchange="handleChange()">
+    <h1 id="output5"></h1><br />
+    
+    <p>6. Double click button and display using h2 tag</p>
+    <button ondblclick="handleDoubleClick()">Double-Click Me</button>
+    <h2 id="message"></h2><br />
+    
+    <p>7. Mouse Enter and Leave</p>
+    <div id="hoverBox">Hover over me</div>
+    <p id="status"></p><br />
+
+    <p>8. Key Press and Key Release</p>
+    <input type="text" placeholder="Type something here" id="Keyoutput">
+    
+
+    <script>
+      //1//
+      const button = document.getElementById('simpleClick');
+      button.addEventListener('click', () => {
+        console.log('Button Clicked!');
+      });
+
+      //2//
+      let num1 = 10;
+      let num2 = 20;
+
+      function calculateSum() {
+        let sum = num1 + num2;
+        console.log("Sum: " + sum);
+      }
+
+      //3//
+      function showInputValue() {
+        let inputValue = document.getElementById("userInput3").value;
+        console.log("Input Value: " + inputValue);
+      }
+
+      //4//
+      function displayValue() {
+        let inputValue = document.getElementById("userInput4").value;
+        document.getElementById("output4").innerHTML = inputValue;
+      }
+
+      //5//
+      function handleChange() {
+        let inputValue = document.getElementById("userInput5").value;
+        console.log("Input Changed: " + inputValue);
+        document.getElementById("output5").innerHTML = "Input Changed: " + inputValue;
+      }
+
+      //6//
+      function handleDoubleClick() {
+        console.log("Button was double-clicked!");
+        document.getElementById("message").innerHTML = "Button was double-clicked!";
+      }
+
+      //7//
+      const hoverBox = document.getElementById("hoverBox");
+      const statusText = document.getElementById("status");
+
+      hoverBox.addEventListener("mouseenter", function () {
+        statusText.innerHTML = "Mouse entered!";
+      });
+
+      hoverBox.addEventListener("mouseleave", function () {
+        statusText.innerHTML = "Mouse left!";
+      });
+
+      //8//
+      const pressed =document.getElementById("Keyoutput")
+      pressed.addEventListener("keydown", function () {
+        console.log("Key pressed!");
+      });
+
+      pressed.addEventListener("keyup", function () {
+        console.log("Key released!");
+      });
+    </script>
+</body>
+</html>
