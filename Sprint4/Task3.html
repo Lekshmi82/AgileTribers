@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task3</title>
+</head>
+<body>
+  <script>
+    //1 
+    let person1 = {
+      name: "Lekzzz",
+      age: 20,
+      city: "Berlin"
+    };
+    console.log("Name:", person1.name);
+    console.log("Age:", person1.age);
+    console.log("City:", person1.city);
+
+    person1.city = "Munich";
+    console.log("Updated Person Object:", person1);
+
+    //2 
+    let person2 = {
+      firstName: "Lekzzz",
+      lastName: "Nile",
+      getFullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+    // Call the method and show in console
+    let fullName = person2.getFullName();
+    console.log("Full Name:", fullName);
+
+    //3
+    //Create a JSON string
+    let jsonString = '{"name": "Lekzzz", "email": "lekzzz@gmail.com", "skills": ["JavaScript", "HTML", "CSS"]}';
+
+    //Parse the JSON string into an object
+    let userObject = JSON.parse(jsonString);
+
+    //Log values to the console
+    console.log("Name:", userObject.name);
+    console.log("Email:", userObject.email);
+    console.log("Skills:", userObject.skills.join(", "));
+
+    //4
+    
+    fetch('data.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json(); // Convert to JavaScript object
+      })
+      .then(data => {
+        console.log("User Data:", data);
+        data.forEach(user => {
+          console.log(`Name: ${user.name}, Age: ${user.age}, City: ${user.city}`);
+        });
+      })
+      .catch(error => {
+        console.error("Error fetching the JSON file:", error);
+      });
+
+
+  </script>
+</body>
+</html>
