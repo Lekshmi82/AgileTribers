@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch & Display Selected Values</title>
+  <style>
+    .highlight {
+      color: black;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Select your favorite fruit:</h3>
+  <input type="radio" name="fruit" value="Apple"> Apple<br>
+  <input type="radio" name="fruit" value="Banana"> Banana<br>
+  <input type="radio" name="fruit" value="Mango"> Mango<br>
+
+  <h3>Select your hobbies:</h3>
+  <input type="checkbox" name="hobby" value="Reading"> Reading<br>
+  <input type="checkbox" name="hobby" value="Traveling"> Traveling<br>
+  <input type="checkbox" name="hobby" value="Gaming"> Gaming<br>
+
+  <br>
+  <button onclick="displaySelected()">Show Selected</button>
+
+  <p id="output"></p>
+
+
+   <h1 id="mainHeading">Welcome to Agile Tribers</h1>
+
+   <p class="info highlight">We are the AI-First Software Company.</p>
+   <p class="info highlight">We build intelligent solutions.</p>
+   <p class="info highlight">We love clean UI and efficient code.</p>
+ 
+   <button onclick="applyChanges()">Apply Changes</button>
+ 
+   <script>
+    //1
+    function displaySelected() {
+      let selectedRadio = document.querySelector('input[name="fruit"]:checked');
+      let fruit = selectedRadio ? selectedRadio.value : "None";
+
+      let selectedCheckboxes = document.querySelectorAll('input[name="hobby"]:checked');
+      let hobbies = [];
+      selectedCheckboxes.forEach(function(checkbox) {
+        hobbies.push(checkbox.value);
+      });
+
+      document.getElementById("output").innerHTML = 
+        "Selected Fruit: " + fruit + "<br>" +
+        "Selected Hobbies: " + (hobbies.length > 0 ? hobbies.join(", ") : "None");
+    }
+  //2
+     function applyChanges() {
+       // 1. getElementById() –Change content
+       let heading = document.getElementById("mainHeading");
+       heading.innerHTML = "Agile Tribers - Innovation Powered by AI";
+       console.log("Updated Heading:", heading.innerHTML);
+ 
+       // 2. querySelector() –Change style of first matching element
+       let firstInfo = document.querySelector(".info");
+       firstInfo.style.color = "green";
+       firstInfo.style.fontWeight = "bold";
+       console.log("First info element text:", firstInfo.textContent);
+ 
+       // 3. querySelectorAll() –Change style of all matching elements
+       let allInfo = document.querySelectorAll(".highlight");
+       allInfo.forEach(function(element, index) {
+         element.style.backgroundColor = "lightyellow";
+         element.style.padding = "5px";
+         console.log("Info [" + index + "]:", element.textContent);
+       });
+     }
+   </script>
+</body>
+</html>
