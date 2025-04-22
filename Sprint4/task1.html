@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creative Form Submission</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f7ff;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    .success {
+      color: green;
+      margin-top: 10px;
+    }
+
+    .data-display {
+      margin-top: 30px;
+      background-color: #ffffff;
+      padding: 20px;
+      border: 2px solid #b3d4fc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>User Information Form</h2>
+
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Enter your name *" />
+    <input type="email" id="email" placeholder="Enter your email *" />
+    <input type="number" id="age" placeholder="Enter your age *" />
+    <button type="submit">Submit</button>
+    <p id="message" class=""></p>
+  </form>
+
+  <div id="displayBox" class="data-display" style="display: none;">
+    <h3>Submitted Details:</h3>
+    <p><strong>Name:</strong> <span id="dispName"></span></p>
+    <p><strong>Email:</strong> <span id="dispEmail"></span></p>
+    <p><strong>Age:</strong> <span id="dispAge"></span></p>
+  </div>
+
+  <script>
+    const form = document.getElementById("userForm");
+    const msg = document.getElementById("message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      msg.textContent = "";
+      msg.className = "";
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const age = document.getElementById("age").value.trim();
+
+      const nameRegex = /^[A-Za-z\s]+$/;
+      const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      // Validation
+      if (!name || !email || !age) {
+        showError("All fields are required.");
+        return;
+      }
+
+      if (!nameRegex.test(name)) {
+        showError("Name should contain letters and spaces only.");
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        showError("Please enter a valid email (e.g., example@email.com).");
+        return;
+      }
+
+      if (isNaN(age) || age <= 0 || !Number.isInteger(Number(age))) {
+        showError("Age must be a valid number greater than 0.");
+        return;
+      }
+
+      const user = { name, email, age };
+      localStorage.setItem("userData", JSON.stringify(user));
+      showSuccess("Data saved successfully!");
+      displayUserData();
+    });
+
+    function showError(message) {
+      msg.className = "error";
+      msg.textContent = message;
+    }
+
+    function showSuccess(message) {
+      msg.className = "success";
+      msg.textContent = message;
+    }
+
+    function displayUserData() {
+      const stored = localStorage.getItem("userData");
+      if (stored) {
+        const user = JSON.parse(stored);
+        document.getElementById("dispName").textContent = user.name;
+        document.getElementById("dispEmail").textContent = user.email;
+        document.getElementById("dispAge").textContent = user.age;
+        document.getElementById("displayBox").style.display = "block";
+      }
+    }
+
+    window.addEventListener("load", displayUserData);
+  </script>
+
+</body>
+</html>

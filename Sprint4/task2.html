@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List with Completion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f2f2f2;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 10px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      background: white;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .task-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .task-content span {
+      margin-left: 10px;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .actions button {
+      margin-left: 5px;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>✅ My To-Do List</h2>
+
+  <input type="text" id="taskInput" placeholder="Enter a task..." />
+  <button onclick="addTask()">Add Task</button>
+  <p id="error" class="error"></p>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    let tasks = [];
+
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const error = document.getElementById("error");
+      const taskText = input.value.trim();
+
+      if (!taskText) {
+        error.textContent = "❌ Task cannot be empty.";
+        return;
+      }
+
+      if (tasks.some(task => task.text === taskText.toLowerCase())) {
+        error.textContent = "⚠️ Task already exists.";
+        return;
+      }
+
+      tasks.push({ text: taskText.toLowerCase(), completed: false });
+      error.textContent = "";
+      input.value = "";
+      renderTasks();
+    }
+
+    function renderTasks() {
+      const taskList = document.getElementById("taskList");
+      taskList.innerHTML = "";
+
+      tasks.forEach((task, index) => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+          <div class="task-content">
+            <input type="checkbox" onchange="toggleTask(${index})" ${task.completed ? 'checked' : ''}>
+            <span class="${task.completed ? 'completed' : ''}">${task.text}</span>
+          </div>
+          <div class="actions">
+            <button onclick="editTask(${index})">Edit</button>
+            <button onclick="deleteTask(${index})">Delete</button>
+          </div>
+        `;
+
+        taskList.appendChild(li);
+      });
+    }
+
+    function deleteTask(index) {
+      tasks.splice(index, 1);
+      renderTasks();
+    }
+
+    function editTask(index) {
+      const newTask = prompt("Edit task:", tasks[index].text);
+      const error = document.getElementById("error");
+
+      if (newTask === null) return;
+
+      const trimmedTask = newTask.trim();
+
+      if (!trimmedTask) {
+        error.textContent = "❌ Task cannot be empty.";
+        return;
+      }
+
+      if (tasks.some((task, i) => task.text === trimmedTask.toLowerCase() && i !== index)) {
+        error.textContent = "⚠️ Task already exists.";
+        return;
+      }
+
+      tasks[index].text = trimmedTask.toLowerCase();
+      error.textContent = "";
+      renderTasks();
+    }
+
+    function toggleTask(index) {
+      tasks[index].completed = !tasks[index].completed;
+      renderTasks();
+    }
+  </script>
+
+</body>
+</html>
